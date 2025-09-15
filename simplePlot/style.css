@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(90deg, #ffe29f, #ffa99f, #ff719a, #ff9ac9);
+}
+* {
+  font-family: sans-serif;
+}
+/* NAVBAR */
+#navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(255, 40, 40, 0.608);
+}
+#navbar > a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 1rem;
+}
+#navbar > img {
+  width: 3%;
+}
+/* home */
+#home {
+  width: 100%;
+  height: 93vh;
+  display: flex;
+}
+#home-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+}
+#home-info > h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  font-family: sans-serif;
+  letter-spacing: 5px;
+}
+#home-info > p {
+  text-align: justify;
+}
+#home-info > span {
+  width: fit-content;
+  background-color: rgba(255, 40, 40, 0.801);
+  padding: 0.5rem 3rem;
+  margin-top: 2rem;
+  color: white;
+}
+#home-img {
+  width: 50%;
+  background-image: url("./images/homeimg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* PAGE-2 */
+#page2 {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+#image-div {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  grid-template-rows: repeat(2, 200px);
+  gap: 10px;
+}
+#image-div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+#image-div img:nth-child(2) {
+  grid-row: span 2;
+  height: 100%;
+}
+#pageinfo {
+  background-color: #ff6f61;
+  padding: 2rem 3rem;
+  border-radius: 4px;
+  color: white;
+  max-width: 400px;
+}
+#pageinfo > p {
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+#pageinfo > h1 {
+  margin: 1rem 0;
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: bold;
+}
+#arrow {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+}
+#arrow > img {
+  width: 5%;
+}
+
+
+/* MOBILE */
+@media (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }  
+  #navbar {
+    justify-content: end;
+  }
+  #navbar > a {
+    display: none;
+  }
+  #navbar > img {
+    padding: 1rem;
+    width: 5%;
+  }
+  #home {
+    flex-direction: column;
+    height: 150vh;
+  }
+  #home-info {
+    width: 80%;
+  }
+  #home-img {
+    width: 100%;
+    height: 50%;
+  }
+  #page2 {
+    height: 100vh;
+    width: 100%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #image-div {
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+  }
+  #pageinfo {
+    width: 50%;
+  }
+}
